@@ -1,7 +1,7 @@
 const { constants } = require('buffer');
 const connection = require('../config/connection');
 const { Thought, User } = require('../models');
-const getRandomName = require('./data');
+const {getRandomName, getRandomThoughts}= require('./data');
 
 console.log(getRandomName());
 connection.on('error', (err) => err);

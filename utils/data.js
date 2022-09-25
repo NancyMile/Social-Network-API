@@ -58,7 +58,7 @@ const thoughts = [
 ];
 const users = [];
 const getNamePart = () => names[Math.floor(Math.random() * names.length)];
-const getRandomName = () => `${getNamePart()}`;
+const getRandomName = () => `${getNamePart()}_${getNamePart()}`;
 
 // Get a random item given an array
 const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -68,7 +68,6 @@ const getRandomThoughts = (int) => {
   for (let i = 0; i < int; i++) {
     results.push({
       thoughtText: getRandomArrItem(thoughts),
-      score: Math.floor(Math.random() * (99 - 70 + 1) + 70),
     });
   }
   return results;
