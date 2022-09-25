@@ -3,7 +3,7 @@ const { Schema, model } = require('mongoose');
 // Schema to create User model
 const userSchema = new Schema(
   {
-    username: { type: String, required: [true, 'Username required'], unique: true},
+    username: { type: String, required: [true, 'Username required'], unique: true, trim: true},
     email: { type: String, required: [true, 'Email required'], match: /.+\@.+\..+/, unique: true},
     thoughts: [
       {
@@ -25,9 +25,6 @@ const userSchema = new Schema(
     id: false,
   }
 );
-
-// Make all strings be trimmed by default
-mongoose.SchemaTypes.String.set('trim', true);
 
 // Create a virtual property `friendCount` that retrieves the length of the user's friends.
 userSchema
