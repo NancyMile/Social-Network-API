@@ -1,12 +1,12 @@
 const { Schema, model } = require('mongoose');
+const moment = require("moment");
 
 // Schema to create User model
 const userSchema = new Schema(
   {
     username: { type: String, required: [true, 'Username required'], unique: true, trim: true},
     email: { type: String, required: [true, 'Email required'], match: /.+\@.+\..+/, unique: true},
-    thoughts: [
-      {
+    thoughts: [{
         type: Schema.Types.ObjectId,
         ref: 'thought',
       },
