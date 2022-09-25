@@ -1,26 +1,24 @@
+const { constants } = require('buffer');
 const connection = require('../config/connection');
-const { Post, User } = require('../models');
+const { Thought, User } = require('../models');
 const getRandomName = require('./data');
 
 console.log(getRandomName());
 connection.on('error', (err) => err);
-
+//delete records
 connection.once('open', async () => {
   console.log('connected');
-  await Post.deleteMany({});
+  await Thought.deleteMany({});
   await User.deleteMany({});
 
   const users = [];
 
   for (let i = 0; i < 20; i++) {
-    const fullName = getRandomName();
-    const first = fullName.split(' ')[0];
-    const last = fullName.split(' ')[1];
-
+    const username = getRandomName();
+    const email = username+"@test"+i+".com";
     users.push({
-      first,
-      last,
-      age: Math.floor(Math.random() * (99 - 18 + 1) + 18),
+      username,
+      email,
     });
   }
 
