@@ -22,7 +22,30 @@ The following animations show examples of the application's API routes being tes
 
 The following animation shows GET routes to return all users and all thoughts being tested in Insomnia:
 
-![Demo of GET routes to return all users and all thoughts being tested in Insomnia.](./Assets/socialnetwork.gif)
+![Demo of GET routes to return all users and all thoughts being tested in Insomnia.](./Assets/SocialNetwork.gif)
+
+![Demo of GET routes to return all users and all thoughts being tested in Insomnia.](./Assets/all-users.gif)
+
+The following animation shows GET routes to return a single user and a single thought being tested in Insomnia:
+
+![Demo that shows GET routes to return a single user and a single thought being tested in Insomnia.](./Assets/find-user.gif)
+
+The following animation shows the POST, PUT, and DELETE routes for users being tested in Insomnia:
+
+![Demo that shows the POST, PUT, and DELETE routes for users being tested in Insomnia.](./Assets/create-user.gif)
+
+![Demo that shows the POST, PUT, and DELETE routes for users being tested in Insomnia.](./Assets/update-user.gif)
+
+![Demo that shows the POST, PUT, and DELETE routes for users being tested in Insomnia.](./Assets/delete-user.gif)
+
+In addition to this, your walkthrough video should show the POST, PUT, and DELETE routes for thoughts being tested in Insomnia.
+
+The following animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia:
+
+![Demo that shows the PUT routes for a user list being tested in Insomnia.](./Assets/update-user.gif)
+
+In addition to this, your walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia.
+
 
 
 ---
